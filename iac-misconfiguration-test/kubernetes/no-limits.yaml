@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: synthetic-no-limits
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: fixture}
+  template:
+    metadata:
+      labels: {app: fixture}
+    spec:
+      containers:
+        - name: fixture
+          image: example.invalid/security-fixture:1.0
+          # TESTCASE: IAC-021 Kubernetes container has no CPU or memory resource limits
+          ports:
+            - containerPort: 8080

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "IAC-001",
+    "name": "Public S3 ACL",
+    "formats": [
+      "Terraform"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-002",
+    "name": "Wildcard/public S3 bucket policy",
+    "formats": [
+      "Terraform"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-003",
+    "name": "S3 bucket encryption missing",
+    "formats": [
+      "Terraform"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "IAC-004",
+    "name": "Azure Storage public blob access enabled",
+    "formats": [
+      "Terraform"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "IAC-005",
+    "name": "Azure Storage HTTPS-only disabled / weak TLS",
+    "formats": [
+      "Terraform"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "IAC-006",
+    "name": "Azure Key Vault purge protection disabled",
+    "formats": [
+      "Terraform"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "IAC-007",
+    "name": "NSG allows SSH from any source",
+    "formats": [
+      "Terraform"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-008",
+    "name": "NSG allows RDP from any source",
+    "formats": [
+      "Terraform"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-009",
+    "name": "Wildcard IAM actions and resources",
+    "formats": [
+      "Terraform"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-010",
+    "name": "Bicep storage allows public blob access",
+    "formats": [
+      "Bicep"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "IAC-011",
+    "name": "Bicep storage HTTPS/TLS enforcement weak",
+    "formats": [
+      "Bicep"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "IAC-012",
+    "name": "ARM Key Vault purge protection disabled",
+    "formats": [
+      "ARM"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "IAC-013",
+    "name": "ARM NSG allows SSH from any source",
+    "formats": [
+      "ARM"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-014",
+    "name": "CloudFormation S3 public-read ACL",
+    "formats": [
+      "CloudFormation"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-015",
+    "name": "CloudFormation S3 wildcard principal",
+    "formats": [
+      "CloudFormation"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-016",
+    "name": "CloudFormation security group open to internet",
+    "formats": [
+      "CloudFormation"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-017",
+    "name": "Kubernetes privileged container",
+    "formats": [
+      "Kubernetes YAML"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-018",
+    "name": "Kubernetes root user / privilege escalation",
+    "formats": [
+      "Kubernetes YAML"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "IAC-019",
+    "name": "Kubernetes host namespaces enabled",
+    "formats": [
+      "Kubernetes YAML"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "IAC-020",
+    "name": "Kubernetes hostPath mount",
+    "formats": [
+      "Kubernetes YAML"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "IAC-021",
+    "name": "Kubernetes container missing resource limits",
+    "formats": [
+      "Kubernetes YAML"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "IAC-022",
+    "name": "Kubernetes Service exposed through LoadBalancer",
+    "formats": [
+      "Kubernetes YAML"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "IAC-023",
+    "name": "Docker Compose privileged container",
+    "formats": [
+      "Docker Compose"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-024",
+    "name": "Docker Compose mounts Docker socket",
+    "formats": [
+      "Docker Compose"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "IAC-025",
+    "name": "Dockerfile runs as root",
+    "formats": [
+      "Dockerfile"
+    ],
+    "severity": "high"
+  }
+]

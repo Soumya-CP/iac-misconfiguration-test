@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [{
+    "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+    "apiVersion": "2023-09-01",
+    "name": "nsg-fixture/allow-any-ssh",
+    "metadata": {"fixtureMarker": "TESTCASE: IAC-013 ARM NSG allows SSH from any source"},
+    "properties": {
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "sourceAddressPrefix": "*",
+      "destinationPortRange": "22",
+      "sourcePortRange": "*"
+    }
+  }]
+}

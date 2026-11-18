@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  PublicBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: synthetic-cfn-public-bucket
+      # TESTCASE: IAC-014 CloudFormation S3 bucket grants public-read ACL
+      AccessControl: PublicRead
+  PublicBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref PublicBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          # TESTCASE: IAC-015 CloudFormation S3 policy permits wildcard principal
+          - Effect: Allow
+            Principal: '*'
+            Action: s3:GetObject
+            Resource: !Sub '${PublicBucket.Arn}/*'

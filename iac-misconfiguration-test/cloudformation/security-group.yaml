@@ -1,0 +1,11 @@
+Resources:
+  OpenSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: synthetic scanner fixture
+      SecurityGroupIngress:
+        # TESTCASE: IAC-016 CloudFormation security group exposes all TCP ports to the world
+        - IpProtocol: tcp
+          FromPort: 0
+          ToPort: 65535
+          CidrIp: 0.0.0.0/0

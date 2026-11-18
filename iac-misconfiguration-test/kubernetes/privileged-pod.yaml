@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: synthetic-privileged-pod
+spec:
+  containers:
+    - name: fixture
+      image: example.invalid/security-fixture:1.0
+      securityContext:
+        # TESTCASE: IAC-017 Kubernetes container runs privileged
+        privileged: true
+        # TESTCASE: IAC-018 Kubernetes container allows privilege escalation and runs as root
+        allowPrivilegeEscalation: true
+        runAsUser: 0

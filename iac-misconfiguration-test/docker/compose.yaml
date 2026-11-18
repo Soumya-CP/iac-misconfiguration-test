@@ -1,0 +1,10 @@
+services:
+  app:
+    image: example.invalid/security-fixture:1.0
+    # TESTCASE: IAC-023 Docker Compose enables privileged mode
+    privileged: true
+    volumes:
+      # TESTCASE: IAC-024 Docker Compose mounts host Docker socket into container
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8080:8080"
